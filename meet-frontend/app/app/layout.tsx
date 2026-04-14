@@ -14,8 +14,8 @@ export const appContext = createContext({
     setSocket: (socket: Socket) => {},
     connected: false,
     theme: {
-        name: "Spooky",
-        data: "spooky"
+        name: "Light",
+        data: "light"
     },
     setTheme: (theme: {name: string, data: string}) => {}
 })
@@ -26,8 +26,8 @@ export default function AppLayout({children}: {children: React.ReactNode}) {
     const [connected, setConnected] = useState(false)
     const router = useRouter()
     const [theme, setTheme] = useState({
-        name: "Spooky",
-        data: "spooky"
+        name: "Light",
+        data: "light"
     })
     useEffect(() => {
         document.body.setAttribute("data-theme", theme.data)
